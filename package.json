@@ -1,0 +1,23 @@
+{
+  "name": "tienda-segura",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelinaGomezTorres/tienda-segura.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelinaGomezTorres/tienda-segura/issues"
+  },
+  "homepage": "https://github.com/MelinaGomezTorres/tienda-segura#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
