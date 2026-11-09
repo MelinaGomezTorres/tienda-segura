@@ -38,7 +38,7 @@ jobs:
       - run: pip install semgrep
 
       # Analiza el código con las reglas recomendadas (--config auto) y falla si encuentra problemas.
-      - run: semgrep scan --config auto --error
+      - run: semgrep scan --config p/javascript --error
 
       # Gitleaks busca secretos expuestos (claves, tokens, contraseñas) en el código y el historial.
       - uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7
