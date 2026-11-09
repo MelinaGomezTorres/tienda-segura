@@ -5,6 +5,7 @@ on: [pull_request]
 permissions:
   contents: read
   pull-requests: write
+  issues: write
 
 jobs:
   verificar:
@@ -36,4 +37,4 @@ jobs:
         uses: zaproxy/action-baseline@v0.12.0
         with:
           target: 'http://localhost:3000'
-          issue_title: ''
+          cmd_options: '-I'
