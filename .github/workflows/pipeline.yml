@@ -28,3 +28,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: docker run --rm -v "$PWD":/src aquasec/trivy:latest config --exit-code 1 --severity HIGH,CRITICAL /src
+
+      - name: Iniciar aplicacion en segundo plano
+        run: node app.js &
+
+      - name: Escaneo DAST con OWASP ZAP
+        uses: zaproxy/action-baseline@v0.12.0
+        with:
+          target: 'http://localhost:3000'
